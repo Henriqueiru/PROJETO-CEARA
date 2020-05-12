@@ -19,17 +19,42 @@ namespace MAC_Example
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            nt = new Thread(novoForm);
-            nt.SetApartmentState(ApartmentState.STA);
-            nt.Start();
-        }
-
+    
         private void novoForm()
         {
             Application.Run(new Form2());
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtname2.Text == "Cleiton" && txtsenha2.Text == "ceara531978")
+            {
+                this.Close();
+                nt = new Thread(novoForm);
+                nt.SetApartmentState(ApartmentState.STA);
+                nt.Start();
+            }
+            else
+            {
+                MessageBox.Show("Login ou Senha invalidos!");
+            }
+          
+        }
+
+        private void txtname2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtsenha2_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void guna2CirclePictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

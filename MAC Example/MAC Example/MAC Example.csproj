@@ -37,6 +37,9 @@
       <HintPath>..\..\..\..\Desktop\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Downloads\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -72,6 +75,18 @@
     <Compile Include="UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_DashboardClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DashboardClientes.Designer.cs">
+      <DependentUpon>UC_DashboardClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DashboardEstoque.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DashboardEstoque.Designer.cs">
+      <DependentUpon>UC_DashboardEstoque.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +105,15 @@
     <EmbeddedResource Include="UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_DashboardClientes.resx">
+      <DependentUpon>UC_DashboardClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DashboardEstoque.resx">
+      <DependentUpon>UC_DashboardEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
