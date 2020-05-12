@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace MAC_Example
 {
     public partial class Form2 : Form
@@ -17,7 +16,10 @@ namespace MAC_Example
         {
             InitializeComponent();
             UC_Dashboard uC_ = new UC_Dashboard();
+            UC_DashboardEstoque UC_ = new UC_DashboardEstoque();
+            UC_DashboardClientes Uc_ = new UC_DashboardClientes();
             addUserControl(uC_);
+           
         }
         private void moveImageBox(object sender)
         {
@@ -41,6 +43,28 @@ namespace MAC_Example
         {
             UC_Dashboard uC_ = new UC_Dashboard();
             addUserControl(uC_);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            UC_DashboardEstoque UC_ = new UC_DashboardEstoque();
+            addUserControl(UC_);
+        }
+
+        private void panelContener_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            UC_DashboardClientes Uc_ = new UC_DashboardClientes();
+            addUserControl(Uc_);
         }
     }
 }
