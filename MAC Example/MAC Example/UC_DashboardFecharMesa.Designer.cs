@@ -52,12 +52,12 @@
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnFechar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnVoltar = new Guna.UI2.WinForms.Guna2Button();
+            this.lblMesa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvlista = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.lblMesa = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnVoltar = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFechar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -384,6 +384,74 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(272, 329);
             this.guna2CustomGradientPanel2.TabIndex = 65;
             // 
+            // btnFechar
+            // 
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.BorderColor = System.Drawing.Color.Green;
+            this.btnFechar.BorderRadius = 18;
+            this.btnFechar.BorderThickness = 1;
+            this.btnFechar.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnFechar.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnFechar.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.CheckedState.Image")));
+            this.btnFechar.CheckedState.Parent = this.btnFechar;
+            this.btnFechar.CustomImages.Parent = this.btnFechar;
+            this.btnFechar.FillColor = System.Drawing.Color.Green;
+            this.btnFechar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.HoverState.Parent = this.btnFechar;
+            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
+            this.btnFechar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnFechar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnFechar.Location = new System.Drawing.Point(142, 267);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.ShadowDecoration.Parent = this.btnFechar;
+            this.btnFechar.Size = new System.Drawing.Size(117, 39);
+            this.btnFechar.TabIndex = 89;
+            this.btnFechar.Tag = "Concluir";
+            this.btnFechar.Text = "Concluir";
+            this.btnFechar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnFechar.UseTransparentBackground = true;
+            this.btnFechar.Click += new System.EventHandler(this.OnClickBotoes);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.BorderColor = System.Drawing.Color.Green;
+            this.btnVoltar.BorderRadius = 18;
+            this.btnVoltar.BorderThickness = 1;
+            this.btnVoltar.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.btnVoltar.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnVoltar.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.CheckedState.Image")));
+            this.btnVoltar.CheckedState.Parent = this.btnVoltar;
+            this.btnVoltar.CustomImages.Parent = this.btnVoltar;
+            this.btnVoltar.FillColor = System.Drawing.Color.Green;
+            this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.ForeColor = System.Drawing.Color.White;
+            this.btnVoltar.HoverState.Parent = this.btnVoltar;
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnVoltar.Location = new System.Drawing.Point(19, 267);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.ShadowDecoration.Parent = this.btnVoltar;
+            this.btnVoltar.Size = new System.Drawing.Size(117, 39);
+            this.btnVoltar.TabIndex = 88;
+            this.btnVoltar.Tag = "Voltar";
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseTransparentBackground = true;
+            this.btnVoltar.Click += new System.EventHandler(this.OnClickBotoes);
+            // 
+            // lblMesa
+            // 
+            this.lblMesa.BackColor = System.Drawing.Color.Transparent;
+            this.lblMesa.Font = new System.Drawing.Font("Segoe UI Emoji", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMesa.ForeColor = System.Drawing.Color.White;
+            this.lblMesa.Location = new System.Drawing.Point(107, 5);
+            this.lblMesa.Margin = new System.Windows.Forms.Padding(5);
+            this.lblMesa.Name = "lblMesa";
+            this.lblMesa.Size = new System.Drawing.Size(60, 34);
+            this.lblMesa.TabIndex = 87;
+            this.lblMesa.Text = "Mesa";
+            // 
             // dgvlista
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -486,70 +554,6 @@
             this.guna2Button1.Size = new System.Drawing.Size(60, 50);
             this.guna2Button1.TabIndex = 68;
             this.guna2Button1.UseTransparentBackground = true;
-            // 
-            // lblMesa
-            // 
-            this.lblMesa.BackColor = System.Drawing.Color.Transparent;
-            this.lblMesa.Font = new System.Drawing.Font("Segoe UI Emoji", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMesa.ForeColor = System.Drawing.Color.White;
-            this.lblMesa.Location = new System.Drawing.Point(107, 5);
-            this.lblMesa.Margin = new System.Windows.Forms.Padding(5);
-            this.lblMesa.Name = "lblMesa";
-            this.lblMesa.Size = new System.Drawing.Size(60, 34);
-            this.lblMesa.TabIndex = 87;
-            this.lblMesa.Text = "Mesa";
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.BorderColor = System.Drawing.Color.DarkRed;
-            this.btnVoltar.BorderRadius = 24;
-            this.btnVoltar.BorderThickness = 1;
-            this.btnVoltar.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btnVoltar.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnVoltar.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.CheckedState.Image")));
-            this.btnVoltar.CheckedState.Parent = this.btnVoltar;
-            this.btnVoltar.CustomImages.Parent = this.btnVoltar;
-            this.btnVoltar.FillColor = System.Drawing.Color.Maroon;
-            this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.HoverState.Parent = this.btnVoltar;
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
-            this.btnVoltar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnVoltar.Location = new System.Drawing.Point(51, 267);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.ShadowDecoration.Parent = this.btnVoltar;
-            this.btnVoltar.Size = new System.Drawing.Size(81, 56);
-            this.btnVoltar.TabIndex = 88;
-            this.btnVoltar.Tag = "Voltar";
-            this.btnVoltar.UseTransparentBackground = true;
-            this.btnVoltar.Click += new System.EventHandler(this.OnClickBotoes);
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
-            this.btnFechar.BorderColor = System.Drawing.Color.Green;
-            this.btnFechar.BorderRadius = 24;
-            this.btnFechar.BorderThickness = 1;
-            this.btnFechar.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.btnFechar.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnFechar.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.CheckedState.Image")));
-            this.btnFechar.CheckedState.Parent = this.btnFechar;
-            this.btnFechar.CustomImages.Parent = this.btnFechar;
-            this.btnFechar.FillColor = System.Drawing.Color.Green;
-            this.btnFechar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.HoverState.Parent = this.btnFechar;
-            this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnFechar.Location = new System.Drawing.Point(148, 267);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.ShadowDecoration.Parent = this.btnFechar;
-            this.btnFechar.Size = new System.Drawing.Size(81, 56);
-            this.btnFechar.TabIndex = 89;
-            this.btnFechar.Tag = "Concluir";
-            this.btnFechar.UseTransparentBackground = true;
-            this.btnFechar.Click += new System.EventHandler(this.OnClickBotoes);
             // 
             // guna2PictureBox2
             // 
