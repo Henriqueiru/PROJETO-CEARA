@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2Button6.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnFechar.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJxJREFUSEvt
         kNEJgDAQQ7uE4hDu56/fDuUQ+uE4mgMF9VIae78+CKUhl6NNP1EGaH8ph5KhTJAyrGQcDbRAyrCSedBC
@@ -139,7 +139,7 @@
         6WVU6Wf19F8v/ELHhELhD8E2l+LObc0pAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2Button5.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnRelatórios.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAhRJREFUaEPt
         lFFOG0EUBAeSg+USXj44CL/chfxxQttIjjsqt5ZRW37GgzeRtqSSEqozMyYkbWVlZeX/ZD+1l930cLgk
@@ -163,7 +163,7 @@
         XykAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2Button4.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnClientes.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAUxJREFUSEvt
         UjFOAzEQXF9BQ00LFfAHkKCnBNlHQwUPiQQS4RN8gApRQWigyCsCFdCkS5By50MyM2GxTpfDUFFEGWl0
@@ -184,7 +184,7 @@
         G4Q4wH01jKIa1bYS3MA+XyditcoGek2S/ACMf/Z5upwEuAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button3.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnVendas.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAA8hJREFUaEPt
         mE1o1EAUx1/iBxRBPSjiF3hSEQ96EAQviuJJsbQmWdEiFinqQbx48WLBg4heRNGbWC+KgoKfd8EeqqKg
@@ -218,7 +218,7 @@
         dYnclrTuTxAEX4QfkLjs+WXeAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2Button2.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnEstoque.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAASFJREFUSEvt
         kztOxEAQRGscAGeAiIBzIJERo5kh4XMBPgFCIiNjr4K4AhlCAhI+B+AjwREW2HEw1JhGlphea8fhaksq
@@ -256,7 +256,7 @@
         OXZYOXiPSXbY0tLS0lI3nc5fpQcA3HImQw4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2Button1.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnHome.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAABGNJREFUaEPt
         mV2IVVUUx9e5ZgqWQSIigX0ofRCkYkIRWNSTPSh+nHNGQu3J1x5FFPHRVx/1aehRqegl8qGimqASBesh

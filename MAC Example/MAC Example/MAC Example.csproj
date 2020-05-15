@@ -103,6 +103,12 @@
     <Compile Include="UC_DashboardMesas.Designer.cs">
       <DependentUpon>UC_DashboardMesas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_DashboardRelatorios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DashboardRelatorios.Designer.cs">
+      <DependentUpon>UC_DashboardRelatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_DashboardVendas.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_DashboardMesas.resx">
       <DependentUpon>UC_DashboardMesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DashboardRelatorios.resx">
+      <DependentUpon>UC_DashboardRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_DashboardVendas.resx">
       <DependentUpon>UC_DashboardVendas.cs</DependentUpon>

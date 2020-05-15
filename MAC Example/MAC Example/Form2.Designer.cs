@@ -86,7 +86,7 @@
             this.btnFechar.BorderThickness = 1;
             this.btnFechar.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnFechar.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnFechar.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.CheckedState.Image")));
+            this.btnFechar.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.CheckedState.Image")));
             this.btnFechar.CheckedState.Parent = this.btnFechar;
             this.btnFechar.CustomImages.Parent = this.btnFechar;
             this.btnFechar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
@@ -111,7 +111,7 @@
             this.btnRelatórios.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnRelatórios.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnRelatórios.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnRelatórios.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.CheckedState.Image")));
+            this.btnRelatórios.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatórios.CheckedState.Image")));
             this.btnRelatórios.CheckedState.Parent = this.btnRelatórios;
             this.btnRelatórios.CustomImages.Parent = this.btnRelatórios;
             this.btnRelatórios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
@@ -126,6 +126,7 @@
             this.btnRelatórios.TabIndex = 4;
             this.btnRelatórios.UseTransparentBackground = true;
             this.btnRelatórios.CheckedChanged += new System.EventHandler(this.guna2Button1_CheckedChanged);
+            this.btnRelatórios.Click += new System.EventHandler(this.btnRelatórios_Click);
             // 
             // btnClientes
             // 
@@ -136,7 +137,7 @@
             this.btnClientes.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnClientes.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnClientes.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnClientes.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.CheckedState.Image")));
+            this.btnClientes.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.CheckedState.Image")));
             this.btnClientes.CheckedState.Parent = this.btnClientes;
             this.btnClientes.CustomImages.Parent = this.btnClientes;
             this.btnClientes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
@@ -162,7 +163,7 @@
             this.btnVendas.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnVendas.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnVendas.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnVendas.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.CheckedState.Image")));
+            this.btnVendas.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnVendas.CheckedState.Image")));
             this.btnVendas.CheckedState.Parent = this.btnVendas;
             this.btnVendas.CustomImages.Parent = this.btnVendas;
             this.btnVendas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
@@ -188,7 +189,7 @@
             this.btnEstoque.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnEstoque.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnEstoque.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnEstoque.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.CheckedState.Image")));
+            this.btnEstoque.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.CheckedState.Image")));
             this.btnEstoque.CheckedState.Parent = this.btnEstoque;
             this.btnEstoque.CustomImages.Parent = this.btnEstoque;
             this.btnEstoque.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
@@ -226,7 +227,7 @@
             this.btnHome.Checked = true;
             this.btnHome.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnHome.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnHome.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.CheckedState.Image")));
+            this.btnHome.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.CheckedState.Image")));
             this.btnHome.CheckedState.Parent = this.btnHome;
             this.btnHome.CustomImages.Parent = this.btnHome;
             this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));

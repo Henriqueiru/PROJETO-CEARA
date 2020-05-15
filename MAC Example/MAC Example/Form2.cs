@@ -82,5 +82,14 @@ namespace MAC_Example
                 Application.Exit();
             }
         }
+
+        private void btnRelatórios_Click(object sender, EventArgs e)
+        {
+            if (this.NivelAcesso == 0)
+            {
+                UC_DashboardRelatorios uz_ = new UC_DashboardRelatorios();
+                addUserControl(uz_);
+            }
+        }
     }
 }
