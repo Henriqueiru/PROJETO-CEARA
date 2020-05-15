@@ -1,0 +1,20 @@
+C:\Users\User\source\repos\MAC Example\MAC Example\bin\Debug\MAC Example.exe.config
+C:\Users\User\source\repos\MAC Example\MAC Example\bin\Debug\MAC Example.exe
+C:\Users\User\source\repos\MAC Example\MAC Example\bin\Debug\MAC Example.pdb
+C:\Users\User\source\repos\MAC Example\MAC Example\bin\Debug\Guna.UI2.dll
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC Example.csprojAssemblyReference.cache
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.Form1.resources
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.Form2.resources
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.Properties.Resources.resources
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC Example.csproj.GenerateResource.cache
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC Example.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC Example.csproj.CopyComplete
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC Example.exe
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC Example.pdb
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.UC_Dashboard.resources
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.UC_DashboardEstoque.resources
+C:\Users\User\source\repos\MAC Example\MAC Example\bin\Debug\MySql.Data.dll
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.UC_DashboardClientes.resources
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.UC_DashboardVendas.resources
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.UC_DashboardMesas.resources
+C:\Users\User\source\repos\MAC Example\MAC Example\obj\Debug\MAC_Example.UC_DashboardFecharMesa.resources
