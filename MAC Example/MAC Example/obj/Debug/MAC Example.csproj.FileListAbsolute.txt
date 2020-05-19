@@ -36,3 +36,5 @@ C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\De
 C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Debug\MAC Example.csproj.CopyComplete
 C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Debug\MAC Example.exe
 C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Debug\MAC Example.pdb
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Debug\MAC_Example.UC_DashboardRelatorios.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\bin\Debug\FontAwesome.Sharp.dll

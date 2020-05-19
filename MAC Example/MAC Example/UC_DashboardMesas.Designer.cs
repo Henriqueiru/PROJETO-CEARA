@@ -231,7 +231,7 @@
             // 
             this.btnM5.BackColor = System.Drawing.Color.Transparent;
             this.btnM5.BorderColor = System.Drawing.Color.Green;
-            this.btnM5.BorderRadius = 24;
+            this.btnM5.BorderRadius = 30;
             this.btnM5.BorderThickness = 1;
             this.btnM5.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnM5.CheckedState.FillColor = System.Drawing.Color.White;
@@ -243,14 +243,16 @@
             this.btnM5.ForeColor = System.Drawing.Color.White;
             this.btnM5.HoverState.Parent = this.btnM5;
             this.btnM5.Image = ((System.Drawing.Image)(resources.GetObject("btnM5.Image")));
+            this.btnM5.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnM5.ImageSize = new System.Drawing.Size(30, 30);
             this.btnM5.Location = new System.Drawing.Point(323, 331);
             this.btnM5.Name = "btnM5";
             this.btnM5.ShadowDecoration.Parent = this.btnM5;
-            this.btnM5.Size = new System.Drawing.Size(73, 57);
+            this.btnM5.Size = new System.Drawing.Size(60, 60);
             this.btnM5.TabIndex = 108;
             this.btnM5.Tag = "M5";
             this.btnM5.Text = "M5";
+            this.btnM5.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnM5.UseTransparentBackground = true;
             this.btnM5.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -258,7 +260,7 @@
             // 
             this.btnB3.BackColor = System.Drawing.Color.Transparent;
             this.btnB3.BorderColor = System.Drawing.Color.Green;
-            this.btnB3.BorderRadius = 24;
+            this.btnB3.BorderRadius = 30;
             this.btnB3.BorderThickness = 1;
             this.btnB3.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnB3.CheckedState.FillColor = System.Drawing.Color.White;
@@ -270,14 +272,16 @@
             this.btnB3.ForeColor = System.Drawing.Color.White;
             this.btnB3.HoverState.Parent = this.btnB3;
             this.btnB3.Image = ((System.Drawing.Image)(resources.GetObject("btnB3.Image")));
+            this.btnB3.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnB3.ImageSize = new System.Drawing.Size(30, 30);
             this.btnB3.Location = new System.Drawing.Point(582, 290);
             this.btnB3.Name = "btnB3";
             this.btnB3.ShadowDecoration.Parent = this.btnB3;
-            this.btnB3.Size = new System.Drawing.Size(73, 57);
+            this.btnB3.Size = new System.Drawing.Size(60, 60);
             this.btnB3.TabIndex = 107;
             this.btnB3.Tag = "B3";
             this.btnB3.Text = "B3";
+            this.btnB3.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnB3.UseTransparentBackground = true;
             this.btnB3.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -285,7 +289,7 @@
             // 
             this.btnM6.BackColor = System.Drawing.Color.Transparent;
             this.btnM6.BorderColor = System.Drawing.Color.Green;
-            this.btnM6.BorderRadius = 24;
+            this.btnM6.BorderRadius = 30;
             this.btnM6.BorderThickness = 1;
             this.btnM6.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnM6.CheckedState.FillColor = System.Drawing.Color.White;
@@ -297,14 +301,16 @@
             this.btnM6.ForeColor = System.Drawing.Color.White;
             this.btnM6.HoverState.Parent = this.btnM6;
             this.btnM6.Image = ((System.Drawing.Image)(resources.GetObject("btnM6.Image")));
+            this.btnM6.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnM6.ImageSize = new System.Drawing.Size(30, 30);
             this.btnM6.Location = new System.Drawing.Point(411, 331);
             this.btnM6.Name = "btnM6";
             this.btnM6.ShadowDecoration.Parent = this.btnM6;
-            this.btnM6.Size = new System.Drawing.Size(73, 57);
+            this.btnM6.Size = new System.Drawing.Size(60, 60);
             this.btnM6.TabIndex = 106;
             this.btnM6.Tag = "M6";
             this.btnM6.Text = "M6";
+            this.btnM6.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnM6.UseTransparentBackground = true;
             this.btnM6.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -312,7 +318,7 @@
             // 
             this.btnG2.BackColor = System.Drawing.Color.Transparent;
             this.btnG2.BorderColor = System.Drawing.Color.Green;
-            this.btnG2.BorderRadius = 24;
+            this.btnG2.BorderRadius = 30;
             this.btnG2.BorderThickness = 1;
             this.btnG2.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnG2.CheckedState.FillColor = System.Drawing.Color.White;
@@ -324,14 +330,16 @@
             this.btnG2.ForeColor = System.Drawing.Color.White;
             this.btnG2.HoverState.Parent = this.btnG2;
             this.btnG2.Image = ((System.Drawing.Image)(resources.GetObject("btnG2.Image")));
+            this.btnG2.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnG2.ImageSize = new System.Drawing.Size(30, 30);
             this.btnG2.Location = new System.Drawing.Point(142, 227);
             this.btnG2.Name = "btnG2";
             this.btnG2.ShadowDecoration.Parent = this.btnG2;
-            this.btnG2.Size = new System.Drawing.Size(73, 57);
+            this.btnG2.Size = new System.Drawing.Size(60, 60);
             this.btnG2.TabIndex = 105;
             this.btnG2.Tag = "G2";
             this.btnG2.Text = "G2";
+            this.btnG2.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnG2.UseTransparentBackground = true;
             this.btnG2.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -339,7 +347,7 @@
             // 
             this.btnB2.BackColor = System.Drawing.Color.Transparent;
             this.btnB2.BorderColor = System.Drawing.Color.Green;
-            this.btnB2.BorderRadius = 24;
+            this.btnB2.BorderRadius = 30;
             this.btnB2.BorderThickness = 1;
             this.btnB2.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnB2.CheckedState.FillColor = System.Drawing.Color.White;
@@ -351,14 +359,16 @@
             this.btnB2.ForeColor = System.Drawing.Color.White;
             this.btnB2.HoverState.Parent = this.btnB2;
             this.btnB2.Image = ((System.Drawing.Image)(resources.GetObject("btnB2.Image")));
+            this.btnB2.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnB2.ImageSize = new System.Drawing.Size(30, 30);
             this.btnB2.Location = new System.Drawing.Point(582, 224);
             this.btnB2.Name = "btnB2";
             this.btnB2.ShadowDecoration.Parent = this.btnB2;
-            this.btnB2.Size = new System.Drawing.Size(73, 57);
+            this.btnB2.Size = new System.Drawing.Size(60, 60);
             this.btnB2.TabIndex = 104;
             this.btnB2.Tag = "B2";
             this.btnB2.Text = "B2";
+            this.btnB2.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnB2.UseTransparentBackground = true;
             this.btnB2.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -366,7 +376,7 @@
             // 
             this.btnM4.BackColor = System.Drawing.Color.Transparent;
             this.btnM4.BorderColor = System.Drawing.Color.Green;
-            this.btnM4.BorderRadius = 24;
+            this.btnM4.BorderRadius = 30;
             this.btnM4.BorderThickness = 1;
             this.btnM4.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnM4.CheckedState.FillColor = System.Drawing.Color.White;
@@ -378,14 +388,16 @@
             this.btnM4.ForeColor = System.Drawing.Color.White;
             this.btnM4.HoverState.Parent = this.btnM4;
             this.btnM4.Image = ((System.Drawing.Image)(resources.GetObject("btnM4.Image")));
+            this.btnM4.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnM4.ImageSize = new System.Drawing.Size(30, 30);
             this.btnM4.Location = new System.Drawing.Point(411, 268);
             this.btnM4.Name = "btnM4";
             this.btnM4.ShadowDecoration.Parent = this.btnM4;
-            this.btnM4.Size = new System.Drawing.Size(73, 57);
+            this.btnM4.Size = new System.Drawing.Size(60, 60);
             this.btnM4.TabIndex = 103;
             this.btnM4.Tag = "M4";
             this.btnM4.Text = "M4";
+            this.btnM4.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnM4.UseTransparentBackground = true;
             this.btnM4.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -393,7 +405,7 @@
             // 
             this.btnG3.BackColor = System.Drawing.Color.Transparent;
             this.btnG3.BorderColor = System.Drawing.Color.Green;
-            this.btnG3.BorderRadius = 24;
+            this.btnG3.BorderRadius = 30;
             this.btnG3.BorderThickness = 1;
             this.btnG3.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnG3.CheckedState.FillColor = System.Drawing.Color.White;
@@ -405,14 +417,16 @@
             this.btnG3.ForeColor = System.Drawing.Color.White;
             this.btnG3.HoverState.Parent = this.btnG3;
             this.btnG3.Image = ((System.Drawing.Image)(resources.GetObject("btnG3.Image")));
+            this.btnG3.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnG3.ImageSize = new System.Drawing.Size(30, 30);
             this.btnG3.Location = new System.Drawing.Point(142, 290);
             this.btnG3.Name = "btnG3";
             this.btnG3.ShadowDecoration.Parent = this.btnG3;
-            this.btnG3.Size = new System.Drawing.Size(73, 57);
+            this.btnG3.Size = new System.Drawing.Size(60, 60);
             this.btnG3.TabIndex = 102;
             this.btnG3.Tag = "G3";
             this.btnG3.Text = "G3";
+            this.btnG3.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnG3.UseTransparentBackground = true;
             this.btnG3.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -420,7 +434,7 @@
             // 
             this.btnB1.BackColor = System.Drawing.Color.Transparent;
             this.btnB1.BorderColor = System.Drawing.Color.Green;
-            this.btnB1.BorderRadius = 24;
+            this.btnB1.BorderRadius = 30;
             this.btnB1.BorderThickness = 1;
             this.btnB1.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnB1.CheckedState.FillColor = System.Drawing.Color.White;
@@ -432,14 +446,16 @@
             this.btnB1.ForeColor = System.Drawing.Color.White;
             this.btnB1.HoverState.Parent = this.btnB1;
             this.btnB1.Image = ((System.Drawing.Image)(resources.GetObject("btnB1.Image")));
+            this.btnB1.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnB1.ImageSize = new System.Drawing.Size(30, 30);
             this.btnB1.Location = new System.Drawing.Point(582, 161);
             this.btnB1.Name = "btnB1";
             this.btnB1.ShadowDecoration.Parent = this.btnB1;
-            this.btnB1.Size = new System.Drawing.Size(73, 57);
+            this.btnB1.Size = new System.Drawing.Size(60, 60);
             this.btnB1.TabIndex = 101;
             this.btnB1.Tag = "B1";
             this.btnB1.Text = "B1";
+            this.btnB1.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnB1.UseTransparentBackground = true;
             this.btnB1.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -447,7 +463,7 @@
             // 
             this.btnB4.BackColor = System.Drawing.Color.Transparent;
             this.btnB4.BorderColor = System.Drawing.Color.Green;
-            this.btnB4.BorderRadius = 24;
+            this.btnB4.BorderRadius = 30;
             this.btnB4.BorderThickness = 1;
             this.btnB4.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnB4.CheckedState.FillColor = System.Drawing.Color.White;
@@ -459,14 +475,16 @@
             this.btnB4.ForeColor = System.Drawing.Color.White;
             this.btnB4.HoverState.Parent = this.btnB4;
             this.btnB4.Image = ((System.Drawing.Image)(resources.GetObject("btnB4.Image")));
+            this.btnB4.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnB4.ImageSize = new System.Drawing.Size(30, 30);
             this.btnB4.Location = new System.Drawing.Point(582, 353);
             this.btnB4.Name = "btnB4";
             this.btnB4.ShadowDecoration.Parent = this.btnB4;
-            this.btnB4.Size = new System.Drawing.Size(73, 57);
+            this.btnB4.Size = new System.Drawing.Size(60, 60);
             this.btnB4.TabIndex = 100;
             this.btnB4.Tag = "B4";
             this.btnB4.Text = "B4";
+            this.btnB4.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnB4.UseTransparentBackground = true;
             this.btnB4.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -474,7 +492,7 @@
             // 
             this.btnM2.BackColor = System.Drawing.Color.Transparent;
             this.btnM2.BorderColor = System.Drawing.Color.Green;
-            this.btnM2.BorderRadius = 24;
+            this.btnM2.BorderRadius = 30;
             this.btnM2.BorderThickness = 1;
             this.btnM2.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnM2.CheckedState.FillColor = System.Drawing.Color.White;
@@ -486,14 +504,16 @@
             this.btnM2.ForeColor = System.Drawing.Color.White;
             this.btnM2.HoverState.Parent = this.btnM2;
             this.btnM2.Image = ((System.Drawing.Image)(resources.GetObject("btnM2.Image")));
+            this.btnM2.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnM2.ImageSize = new System.Drawing.Size(30, 30);
             this.btnM2.Location = new System.Drawing.Point(411, 202);
             this.btnM2.Name = "btnM2";
             this.btnM2.ShadowDecoration.Parent = this.btnM2;
-            this.btnM2.Size = new System.Drawing.Size(73, 57);
+            this.btnM2.Size = new System.Drawing.Size(60, 60);
             this.btnM2.TabIndex = 98;
             this.btnM2.Tag = "M2";
             this.btnM2.Text = "M2";
+            this.btnM2.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnM2.UseTransparentBackground = true;
             this.btnM2.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -501,7 +521,7 @@
             // 
             this.btnM3.BackColor = System.Drawing.Color.Transparent;
             this.btnM3.BorderColor = System.Drawing.Color.Green;
-            this.btnM3.BorderRadius = 24;
+            this.btnM3.BorderRadius = 30;
             this.btnM3.BorderThickness = 1;
             this.btnM3.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnM3.CheckedState.FillColor = System.Drawing.Color.White;
@@ -513,14 +533,16 @@
             this.btnM3.ForeColor = System.Drawing.Color.White;
             this.btnM3.HoverState.Parent = this.btnM3;
             this.btnM3.Image = ((System.Drawing.Image)(resources.GetObject("btnM3.Image")));
+            this.btnM3.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnM3.ImageSize = new System.Drawing.Size(30, 30);
             this.btnM3.Location = new System.Drawing.Point(323, 265);
             this.btnM3.Name = "btnM3";
             this.btnM3.ShadowDecoration.Parent = this.btnM3;
-            this.btnM3.Size = new System.Drawing.Size(73, 57);
+            this.btnM3.Size = new System.Drawing.Size(60, 60);
             this.btnM3.TabIndex = 99;
             this.btnM3.Tag = "M3";
             this.btnM3.Text = "M3";
+            this.btnM3.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnM3.UseTransparentBackground = true;
             this.btnM3.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -528,7 +550,7 @@
             // 
             this.btnM1.BackColor = System.Drawing.Color.Transparent;
             this.btnM1.BorderColor = System.Drawing.Color.Green;
-            this.btnM1.BorderRadius = 24;
+            this.btnM1.BorderRadius = 30;
             this.btnM1.BorderThickness = 1;
             this.btnM1.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnM1.CheckedState.FillColor = System.Drawing.Color.White;
@@ -540,14 +562,16 @@
             this.btnM1.ForeColor = System.Drawing.Color.White;
             this.btnM1.HoverState.Parent = this.btnM1;
             this.btnM1.Image = ((System.Drawing.Image)(resources.GetObject("btnM1.Image")));
+            this.btnM1.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnM1.ImageSize = new System.Drawing.Size(30, 30);
             this.btnM1.Location = new System.Drawing.Point(323, 202);
             this.btnM1.Name = "btnM1";
             this.btnM1.ShadowDecoration.Parent = this.btnM1;
-            this.btnM1.Size = new System.Drawing.Size(73, 57);
+            this.btnM1.Size = new System.Drawing.Size(60, 60);
             this.btnM1.TabIndex = 97;
             this.btnM1.Tag = "M1";
             this.btnM1.Text = "M1";
+            this.btnM1.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnM1.UseTransparentBackground = true;
             this.btnM1.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -555,7 +579,7 @@
             // 
             this.btnG1.BackColor = System.Drawing.Color.Transparent;
             this.btnG1.BorderColor = System.Drawing.Color.Green;
-            this.btnG1.BorderRadius = 24;
+            this.btnG1.BorderRadius = 30;
             this.btnG1.BorderThickness = 1;
             this.btnG1.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnG1.CheckedState.FillColor = System.Drawing.Color.White;
@@ -567,14 +591,16 @@
             this.btnG1.ForeColor = System.Drawing.Color.White;
             this.btnG1.HoverState.Parent = this.btnG1;
             this.btnG1.Image = ((System.Drawing.Image)(resources.GetObject("btnG1.Image")));
+            this.btnG1.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnG1.ImageSize = new System.Drawing.Size(30, 30);
             this.btnG1.Location = new System.Drawing.Point(142, 161);
             this.btnG1.Name = "btnG1";
             this.btnG1.ShadowDecoration.Parent = this.btnG1;
-            this.btnG1.Size = new System.Drawing.Size(73, 57);
+            this.btnG1.Size = new System.Drawing.Size(60, 60);
             this.btnG1.TabIndex = 96;
             this.btnG1.Tag = "G1";
             this.btnG1.Text = "G1";
+            this.btnG1.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnG1.UseTransparentBackground = true;
             this.btnG1.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -582,7 +608,7 @@
             // 
             this.btnG4.BackColor = System.Drawing.Color.Transparent;
             this.btnG4.BorderColor = System.Drawing.Color.Green;
-            this.btnG4.BorderRadius = 24;
+            this.btnG4.BorderRadius = 30;
             this.btnG4.BorderThickness = 1;
             this.btnG4.CheckedState.BorderColor = System.Drawing.Color.White;
             this.btnG4.CheckedState.FillColor = System.Drawing.Color.White;
@@ -594,14 +620,16 @@
             this.btnG4.ForeColor = System.Drawing.Color.White;
             this.btnG4.HoverState.Parent = this.btnG4;
             this.btnG4.Image = ((System.Drawing.Image)(resources.GetObject("btnG4.Image")));
+            this.btnG4.ImageOffset = new System.Drawing.Point(6, -5);
             this.btnG4.ImageSize = new System.Drawing.Size(30, 30);
             this.btnG4.Location = new System.Drawing.Point(142, 353);
             this.btnG4.Name = "btnG4";
             this.btnG4.ShadowDecoration.Parent = this.btnG4;
-            this.btnG4.Size = new System.Drawing.Size(73, 57);
+            this.btnG4.Size = new System.Drawing.Size(60, 60);
             this.btnG4.TabIndex = 95;
             this.btnG4.Tag = "G4";
             this.btnG4.Text = "G4";
+            this.btnG4.TextOffset = new System.Drawing.Point(-8, 14);
             this.btnG4.UseTransparentBackground = true;
             this.btnG4.Click += new System.EventHandler(this.OnClickMesa);
             // 
@@ -683,7 +711,6 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UC_DashboardMesas";
             this.Size = new System.Drawing.Size(796, 570);
-//            this.Load += new System.EventHandler(this.OnLoadForm);
             this.guna2CustomGradientPanel5.ResumeLayout(false);
             this.guna2CustomGradientPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

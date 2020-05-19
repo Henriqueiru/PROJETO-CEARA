@@ -14,7 +14,11 @@ namespace MAC_Example
         {
             try
             {
-                Conexao = new MySqlConnection("server=localhost;port=3307;User Id=root;database=bancodedados; password=usbw; Convert Zero Datetime = True");
+                string connectionString =   "Data Source=MSSQL1;" +
+                                            "Initial Catalog=AdventureWorks;Integrated Security=SSPI;" +
+                                            "MultipleActiveResultSets=True";
+
+                Conexao = new MySqlConnection("server=localhost;port=3307;User Id=root;database=bancodedados; password=usbw; Convert Zero Datetime = True;");
 
             }
             catch(MySqlException e)

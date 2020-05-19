@@ -17,6 +17,7 @@ namespace MAC_Example
         {
             InitializeComponent();
             this.LoadProduto();
+            this.TotalClientes();
         }
         private void LoadProduto()
         {
@@ -39,6 +40,22 @@ namespace MAC_Example
 
             }
             catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        private void TotalClientes()
+        {
+            try
+            {
+                ConexaoMySql dashboard = new ConexaoMySql();
+                dashboard.Open();
+                MySqlCommand Query = new MySqlCommand("SELECT COUNT(Nome) AS Total FROM clientes;",dashboard.Conexao);
+                MySqlDataReader Data = Query.ExecuteReader();
+                Data.Read();
+                lblClientes.Text = Convert.ToString(Data["Total"]);
+            }
+            catch(Exception e) 
             {
                 MessageBox.Show(e.Message);
             }

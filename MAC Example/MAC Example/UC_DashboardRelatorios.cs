@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace MAC_Example
 {
@@ -15,6 +16,30 @@ namespace MAC_Example
         public UC_DashboardRelatorios()
         {
             InitializeComponent();
+            this.LoadLista();
         }
+        private void LoadLista()
+        {
+            try
+            {
+                ConexaoMySql Listar = new ConexaoMySql();
+                Listar.Open();
+
+                MySqlCommand Query = new MySqlCommand("SELECT * FROM fecharmesa ORDER BY Data DESC;", Listar.Conexao);
+               
+                MySqlDataAdapter Adapter = new MySqlDataAdapter(Query);
+                DataTable table = new DataTable();
+
+                Adapter.Fill(table);
+                dgvlista.DataSource = table;
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
     }
+
 }

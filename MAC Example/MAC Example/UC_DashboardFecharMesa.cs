@@ -98,6 +98,8 @@ namespace MAC_Example
                     Query.Parameters.AddWithValue("@Dividir", txtDividir.Text);
                     Query.ExecuteNonQuery();
 
+                    this.SubtrairEstoque();
+
                     MySqlCommand DeletarProdutosMesa = new MySqlCommand("DELETE FROM vendas WHERE Mesa = @Mesa;", cadastrar.Conexao);
                     DeletarProdutosMesa.Parameters.AddWithValue("@Mesa", CodigoMesa);
                     DeletarProdutosMesa.ExecuteNonQuery();
@@ -109,6 +111,31 @@ namespace MAC_Example
                 cadastrar.Close();
                 MessageBox.Show("Mesa Fechada com Sucesso. Agora ela está Aberta para outras pessoas usarem!");
                 formprincipal.addUserControl(new UC_DashboardMesas(formprincipal));
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        private void SubtrairEstoque()
+        {
+            try
+            {
+                ConexaoMySql Conexao = new ConexaoMySql();
+                foreach (DataGridViewRow data in dgvlista.Rows) {
+                    if(Convert.ToInt32(data.Cells[2].Value) > 0)
+                    {
+                        
+                        Conexao.Open();
+                        MySqlCommand Query = new MySqlCommand("UPDATE estoque SET Quantidade = (Quantidade - @Quantidade) WHERE id = @id;", Conexao.Conexao);
+                        Query.Parameters.AddWithValue("@Quantidade", data.Cells[4].Value);
+                        Query.Parameters.AddWithValue("@id", data.Cells[2].Value);
+                        Query.ExecuteNonQuery();
+                        Conexao.Close();
+                    }
+                    
+                }
+                
             }
             catch(Exception e)
             {
