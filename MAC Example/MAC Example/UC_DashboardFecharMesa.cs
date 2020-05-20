@@ -45,7 +45,7 @@ namespace MAC_Example
                 Adapter.Fill(table);
                 dgvlista.DataSource = table;
 
-                foreach(DataRow data in table.Rows)
+                foreach (DataRow data in table.Rows)
                 {
                     valortotal += (Convert.ToDouble(data["Preco"].ToString()) * (int)data["Quantidade"]);
                 }
@@ -56,6 +56,7 @@ namespace MAC_Example
                 dgvlista.Columns[0].Visible = false;
                 dgvlista.Columns[1].Visible = false;
                 dgvlista.Columns[2].Visible = false;
+                dgvlista.Columns[5].Visible = false;
                 dgvlista.Columns[6].DisplayIndex = 0;
             }
             catch (Exception e)
@@ -91,11 +92,12 @@ namespace MAC_Example
                 cadastrar.Open();
                 if (valortotal > 0)
                 {
-                    MySqlCommand Query = new MySqlCommand("INSERT INTO fecharmesa(Nome, Pagamento, ValorTotal, Dividir, Data) VALUES (@Nome, @Pagamento, @ValorTotal, @Dividir, Current_Time())", cadastrar.Conexao);
+                    MySqlCommand Query = new MySqlCommand("INSERT INTO fecharmesa(Nome, Pagamento, ValorTotal, Dividir, Pago, Data) VALUES (@Nome, @Pagamento, @ValorTotal, @Dividir, @Pago, Current_Time())", cadastrar.Conexao);
                     Query.Parameters.AddWithValue("@Nome", txtNome.Text);
                     Query.Parameters.AddWithValue("@Pagamento", cmbPagamento.Text);
                     Query.Parameters.AddWithValue("@ValorTotal", txtValorTotal.Text);
                     Query.Parameters.AddWithValue("@Dividir", txtDividir.Text);
+                    Query.Parameters.AddWithValue("@Pago", (chbPago.Checked?1:0));
                     Query.ExecuteNonQuery();
 
                     this.SubtrairEstoque();

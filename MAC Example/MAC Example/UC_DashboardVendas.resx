@@ -5008,10 +5008,10 @@
   </data>
   <data name="btnFecharMesa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACaSURBVEhL7ZZBCoAgEEWF7hF0nOjutQyCIKh72J/GAtFcNWOLefAXzggPwjGdYRglvPcNJSz1
-        gHRCFqQNJR0gvNmQLpTlYeeDnpx9ETpydiWU5WgOyEE7BViR/IFDY7+2yJGXc08cGrV4zrkuTlZc7VP3
-        iJT8/XB9ATsS5GeZPRFVLpAqV6aelIBsRGZE97dIQKr/EDCMH+DcCf0UK3dysYVuAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAJpJREFUSEvt
+        lkEKgCAQRYXuEXSc6O61DIIgqHvYn8YC0Vw1Y4t58BfOCA/CMZ1hGCW89w0lLPWAdEIWpA0lHSC82ZAu
+        lOVh54OenH0ROnJ2JZTlaA7IQTsFWJH8gUNjv7bIkZdzTxwatXjOuS5OVlztU/eIlPz9cH0BOxLkZ5k9
+        EVUukCpXpp6UgGxEZkT3t0hAqv8QMIwf4NwJ/RQrd3KxhW4AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnVoltar.CheckedState.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -5024,11 +5024,11 @@
   </data>
   <data name="btnVoltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAACuSURBVEhL7ZY9DsIwDEYjKBdAgpuVUzMgWLvDSE+QPle2UH/YsBnqJ31DbClPShu3JUm2Sa11
-        Rw66jAHhmdxIR/Za9gXRidyJcdSWH0jmUsFXjGBNKviJ2fybVPARs7G8SI9R8Xte5KKqDxQ9pUZPpjeD
-        wnVs+TN9XBT+Jo446jdZDiGKnvInaVW1hGb8dTIQxA8QA0n8yDQQzeUxYgFZ/GfRQCg/Ao0ukyRZoZQB
-        fj1SDmykqvYAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAK5JREFUSEvt
+        lj0OwjAMRiMoF0CCm5VTMyBYu8NIT5A+V7ZQf9iwGeonfUNsKU9KG7clSbZJrXVHDrqMAeGZ3EhH9lr2
+        BdGJ3Ilx1JYfSOZSwVeMYE0q+InZ/JtU8BGzsbxIj1Hxe17koqoPFD2lRk+mN4PCdWz5M31cFP4mjjjq
+        N1kOIYqe8idpVbWEZvx1MhDEDxADSfzINBDN5TFiAVn8Z9FAKD8CjS6TJFmhlAF+PVIObKSq9gAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
 </root>
