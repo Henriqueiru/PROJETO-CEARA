@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.cmbSalvar = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -64,7 +64,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.guna2CustomCheckBox1);
+            this.panel1.Controls.Add(this.cmbSalvar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Controls.Add(this.guna2CirclePictureBox2);
@@ -108,25 +108,25 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Mantenha-me logado";
             // 
-            // guna2CustomCheckBox1
+            // cmbSalvar
             // 
-            this.guna2CustomCheckBox1.Animated = true;
-            this.guna2CustomCheckBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2CustomCheckBox1.BackgroundImage")));
-            this.guna2CustomCheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2CustomCheckBox1.CheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2CustomCheckBox1.CheckedState.Parent = this.guna2CustomCheckBox1;
-            this.guna2CustomCheckBox1.Location = new System.Drawing.Point(438, 339);
-            this.guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
-            this.guna2CustomCheckBox1.ShadowDecoration.Parent = this.guna2CustomCheckBox1;
-            this.guna2CustomCheckBox1.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomCheckBox1.TabIndex = 10;
-            this.guna2CustomCheckBox1.UncheckedState.BorderColor = System.Drawing.Color.Orange;
-            this.guna2CustomCheckBox1.UncheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2CustomCheckBox1.UncheckedState.Parent = this.guna2CustomCheckBox1;
+            this.cmbSalvar.Animated = true;
+            this.cmbSalvar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmbSalvar.BackgroundImage")));
+            this.cmbSalvar.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmbSalvar.CheckedState.BorderRadius = 2;
+            this.cmbSalvar.CheckedState.BorderThickness = 0;
+            this.cmbSalvar.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmbSalvar.CheckedState.Parent = this.cmbSalvar;
+            this.cmbSalvar.Location = new System.Drawing.Point(438, 339);
+            this.cmbSalvar.Name = "cmbSalvar";
+            this.cmbSalvar.ShadowDecoration.Parent = this.cmbSalvar;
+            this.cmbSalvar.Size = new System.Drawing.Size(20, 20);
+            this.cmbSalvar.TabIndex = 10;
+            this.cmbSalvar.UncheckedState.BorderColor = System.Drawing.Color.Orange;
+            this.cmbSalvar.UncheckedState.BorderRadius = 2;
+            this.cmbSalvar.UncheckedState.BorderThickness = 0;
+            this.cmbSalvar.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cmbSalvar.UncheckedState.Parent = this.cmbSalvar;
             // 
             // label1
             // 
@@ -364,6 +364,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.OnLoad);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -387,7 +388,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtsenha2;
         private Guna.UI2.WinForms.Guna2TextBox txtname2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox1;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox cmbSalvar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

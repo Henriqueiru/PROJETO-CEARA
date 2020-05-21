@@ -549,6 +549,7 @@
             this.txtPreco.Size = new System.Drawing.Size(134, 29);
             this.txtPreco.TabIndex = 48;
             this.txtPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPreco.TextChanged += new System.EventHandler(this.OnPrecoChanged);
             // 
             // label1
             // 

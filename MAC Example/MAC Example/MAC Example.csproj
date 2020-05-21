@@ -118,6 +118,7 @@
     <Compile Include="UC_DashboardVendas.Designer.cs">
       <DependentUpon>UC_DashboardVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -25,7 +25,7 @@ namespace MAC_Example
                 ConexaoMySql Listar = new ConexaoMySql();
                 Listar.Open();
 
-                MySqlCommand Query = new MySqlCommand("SELECT * FROM fecharmesa ORDER BY Data DESC;", Listar.Conexao);
+                MySqlCommand Query = new MySqlCommand("SELECT Nome, Pagamento, ValorTotal AS Valor, Dividir, IF(Pago, 'Sim', 'Não') AS Pago, Data FROM fecharmesa ORDER BY Data DESC;", Listar.Conexao);
                
                 MySqlDataAdapter Adapter = new MySqlDataAdapter(Query);
                 DataTable table = new DataTable();

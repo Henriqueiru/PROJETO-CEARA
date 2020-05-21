@@ -42,6 +42,21 @@ namespace MAC_Example
                 {
                     throw new Exception("Login ou senha incorretos");
                 }
+
+                if (cmbSalvar.Checked)
+                {
+                    Properties.Settings.Default.login = txtname2.Text;
+                    Properties.Settings.Default.senha = txtsenha2.Text;
+                    Properties.Settings.Default.salvar = true;
+                    Properties.Settings.Default.Save();
+                }
+                else {
+                    Properties.Settings.Default.login = "";
+                    Properties.Settings.Default.senha = "";
+                    Properties.Settings.Default.salvar = false;
+                    Properties.Settings.Default.Save();
+                }
+
                 Form form = new Form2(NivelAcesso);
                 this.Hide();
                 form.Closed += (ss, ee) => this.Close();
@@ -77,6 +92,15 @@ namespace MAC_Example
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void OnLoad(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.salvar) {
+                txtname2.Text = Properties.Settings.Default.login;
+                txtsenha2.Text = Properties.Settings.Default.senha;
+                cmbSalvar.Checked = true;
+            }
         }
     }
 }

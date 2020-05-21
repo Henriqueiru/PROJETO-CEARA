@@ -192,17 +192,17 @@
   </data>
   <data name="chbPago.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAIjSURBVHhe7dnRShtBFIDhPJGt9k5UyO5mZ9U7ofd9gF4IUp/Bl6iz8fG0LaigQlvaM7JT4rjW
-        zWZ3TmT+D86FwYDnPyFGnAAAAAAAAAAAAAAAAAAAnsrn1UZhqy/Nl4jJxc9rcyXzp7DmrHkYMSzG98MR
-        ImmL74cjjOx/8f1whJF0ib8wp83TMIRl4me1uXTf3zwVqyK+IuIrIr4i4isiviLiKyK+IuIrIr4i4isi
-        viLiKyK+IuIrIr4i4isiviLiKyK+IuIrSiK+/PAn6/iDLxNf5upNxs+sOXYLFLX5Ma3LD83D6pJ45Wdz
-        83lxkXU5QhrxbfVJFvgdLqR9hFTif5QFfoUL+dE6QhLxC1sdyQI/w4XCiX2EJOI7EvZQlngIl2qbWEdI
-        Jr43tdWBLLMWR0guvpfNy31Z6j5csm3GOkKy8T3NIyQf38utqWTJqEcgfqC4qIwsG+UIxH9BVs/KvC7v
-        2kKE0/cIxH9FbsvZWEcgfkdZXe5JhNswStt0PQLxlzTkEYjfk3w62pUoKx2B+CuST0c7EucmjNU24RGI
-        P5A+RyD+wJZ5O5Jx4TvFl3mb/0bUkJ2X2xLsOgjYe3jl9zDUEYi/Avce797r28J2GeIP4PEXbW2+h3Ff
-        G+IPKDs3WxK18xGIP4KuRyD+iIr5/qZE/hZG90P8CGZ29l5iPzsC8SNqjvDvDzDiK5h+Ne/cEYivyIUn
-        PgAAAAAAAIARTSZ/Abx4br2MkUg7AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAiNJREFUeF7t
+        2dFKG0EUgOE8ka32TlTI7mZn1Tuh932AXghSn8GXqLPx8bQtqKBCW9ozslPiuNbNZndOZP4PzoXBgOc/
+        IUacAAAAAAAAAAAAAAAAAACeyufVRmGrL82XiMnFz2tzJfOnsOaseRgxLMb3wxEiaYvvhyOM7H/x/XCE
+        kXSJvzCnzdMwhGXiZ7W5dN/fPBWrIr4i4isiviLiKyK+IuIrIr4i4isiviLiKyK+IuIrIr4i4isiviLi
+        KyK+IuIrIr4i4itKIr788Cfr+IMvE1/m6k3Gz6w5dgsUtfkxrcsPzcPqknjlZ3PzeXGRdTlCGvFt9UkW
+        +B0upH2EVOJ/lAV+hQv50TpCEvELWx3JAj/DhcKJfYQk4jsS9lCWeAiXaptYR0gmvje11YEssxZHSC6+
+        l83LfVnqPlyybcY6QrLxPc0jJB/fy62pZMmoRyB+oLiojCwb5QjEf0FWz8q8Lu/aQoTT9wjEf0Vuy9lY
+        RyB+R1ld7kmE2zBK23Q9AvGXNOQRiN+TfDralSgrHYH4K5JPRzsS5yaM1TbhEYg/kD5HIP7Alnk7knHh
+        O8WXeZv/RtSQnZfbEuw6CNh7eOX3MNQRiL8C9x7v3uvbwnYZ4g/g8Rdtbb6HcV8b4g8oOzdbErXzEYg/
+        gq5HIP6Iivn+pkT+Fkb3Q/wIZnb2XmI/OwLxI2qO8O8PMOIrmH4179wRiK/IhSc+AAAAAAAAgBFNJn8B
+        vHhuvYyRSDsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

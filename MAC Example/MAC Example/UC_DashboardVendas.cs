@@ -97,7 +97,7 @@ namespace MAC_Example
 
                     Query.Parameters.AddWithValue("@Mesa", CodigoMesa);
                     Query.Parameters.AddWithValue("@Produto", txtProduto.SelectedValue);
-                    Query.Parameters.AddWithValue("@Preco", txtPreco.Text);
+                    Query.Parameters.AddWithValue("@Preco", Util.ToDecimal(txtPreco.Text));
                     Query.Parameters.AddWithValue("@Quantidade", txtQuantidade.Text);
 
                     Query.ExecuteNonQuery();
@@ -134,7 +134,7 @@ namespace MAC_Example
 
                     Query.Parameters.AddWithValue("@Mesa", CodigoMesa);
                     Query.Parameters.AddWithValue("@Produto", txtProduto.SelectedValue);
-                    Query.Parameters.AddWithValue("@Preco", txtPreco.Text);
+                    Query.Parameters.AddWithValue("@Preco", Util.ToDecimal(txtPreco.Text));
                     Query.Parameters.AddWithValue("@Quantidade", txtQuantidade.Text);
                     Query.Parameters.AddWithValue("@id", txtids.Text);
 
@@ -247,7 +247,7 @@ namespace MAC_Example
 
                 txtids.Text = row.Cells[0].Value.ToString();
                 txtProduto.SelectedValue = row.Cells[2].Value.ToString();
-                txtPreco.Text = row.Cells[3].Value.ToString();
+                txtPreco.Text = Util.ToReais(row.Cells[3].Value.ToString());
                 txtQuantidade.Text = row.Cells[4].Value.ToString();
                 //txtphone.Text = row.Cells[4].Value.ToString();
             }
@@ -280,6 +280,11 @@ namespace MAC_Example
         private void UC_DashboardVendas_Load(object sender, EventArgs e)
         {
 
+        }
+        private void OnPrecoChanged(object sender, EventArgs e)
+        {
+            Guna2TextBox guninha = (Guna2TextBox)sender;
+            Util.OnPressMoeda(ref guninha);
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Relational;
+using Guna.UI2.WinForms;
 
 namespace MAC_Example
 {
@@ -19,134 +20,95 @@ namespace MAC_Example
         {
             InitializeComponent();
             this.LoadLista();
+            txtquantidade.KeyPress += Util.OnPressOnlyDigit;
         }
-        MySqlConnection objCon = new MySqlConnection("server=localhost;port=3307;User Id=root;database=bancodedados; password=usbw; Convert Zero Datetime = True");
+        
+        private void LimparFormulario() {
+            txtid.Clear();
+            txtname.Clear();
+            txtdesc.Clear();
+            datevalidade.Text = "01/01/2020";
+            txtpreco.Clear();
+            txtquantidade.Clear();
+            chbProduto.Checked = false;
+        }
+        
         private void btnInserir_Click(object sender, EventArgs e)
         {
             try
             {
-                objCon.Open();
+                if (string.IsNullOrWhiteSpace(txtname.Text)) {
+                    ConexaoMySql Conexao = new ConexaoMySql();
 
-                txtpreco.Text = String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0:C2}", txtpreco.Text);
-                int qtd = Convert.ToInt32(txtquantidade.Text);
-                string datevenc = datevalidade.Value.ToString("yyyy-MM-dd");
+                    Conexao.Open();
 
-                if (String.IsNullOrEmpty(txtid.Text))
-                {
-                    MySqlCommand objCmd = new MySqlCommand("INSERT INTO `bancodedados`.`estoque` (`Nome`, `Descricao`, `Validade`, `Preco`, `Quantidade`, `Cardapio`) VALUES ('" + txtname.Text + "', '" + txtdesc.Text + "', '" + datevenc + "', '" + txtpreco.Text + "', '" + qtd + "','"+ (chbProduto.Checked ? 1 : 0) + "');", objCon);
-                    objCmd.ExecuteNonQuery();
-                    MessageBox.Show("Inserido com Sucesso!", "OK");
+                    MySqlCommand Query = new MySqlCommand("INSERT INT estoque (Nome, Descricao, Validade, Preco, Quantidade, Cardapio) VALUES (@Nome, @Descricao, @Validade, @Preco, @Quantidade, @Cardapio);", Conexao.Conexao);
+                    Query.Parameters.AddWithValue("@Nome", txtname.Text);
+                    Query.Parameters.AddWithValue("@Descricao", txtdesc.Text);
+                    Query.Parameters.AddWithValue("@Validade", DateTime.Parse(datevalidade.Text));
+                    Query.Parameters.AddWithValue("@Preco", Util.ToDecimal(txtpreco.Text));
+                    Query.Parameters.AddWithValue("@Quantidade", txtquantidade.Text);
+                    Query.Parameters.AddWithValue("@Cardapio", (chbProduto.Checked ? 1 : 0));
 
+                    Query.ExecuteNonQuery();
+
+                    Conexao.Close();
+
+                    this.LoadLista();
+                    this.LimparFormulario();
                 }
-                else
-                {
-                    MessageBox.Show("Selecione a opção Inserir");
-                }
-                objCon.Close();
-                this.LoadLista();
-
-                txtid.Clear();
-                txtname.Clear();
-                txtdesc.Clear();
-                datevalidade.Text = "01/01/2020";
-                txtpreco.Clear();
-                txtquantidade.Clear();
-                chbProduto.Checked = false;
             }
-            catch (Exception a)
-            {
-                MessageBox.Show(a.Message);
-                objCon.Close();
-
-
-                txtid.Clear();
-                txtname.Clear();
-                txtdesc.Clear();
-                datevalidade.Text = "01/01/2020";
-                txtpreco.Clear();
-                txtquantidade.Clear();
-                chbProduto.Checked = false;
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btneditarprod_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (!String.IsNullOrEmpty(txtid.Text))
+            try {
+                if (!string.IsNullOrWhiteSpace(txtid.Text))
                 {
-                    objCon.Open();
-                    string datevenc = datevalidade.Value.ToString("yyyy-MM-dd");
+                    ConexaoMySql Conexao = new ConexaoMySql();
 
-                    MySqlCommand objCmd = new MySqlCommand("UPDATE `bancodedados`.`estoque` SET `Nome` = '" + txtname.Text + "', `Descricao` = '" + txtdesc.Text + "', `Validade` = '" + datevenc + "', `Preco` = '" + txtpreco.Text + "', `Quantidade` = '" + txtquantidade.Text + "' ,`Cardapio` = '"+(chbProduto.Checked?1:0)+"' WHERE (`id` = '" + txtid.Text + "');", objCon);
-                    objCmd.ExecuteNonQuery();
-                    MessageBox.Show("Atualizado Com Sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Conexao.Open();
 
+                    MySqlCommand Query = new MySqlCommand("UPDATE estoque SET Nome = @Nome, Descricao = @Descricao, Validade = @Validade, Preco = @Preco, Quantidade = @Quantidade, Cardapio = @Cardapio WHERE id = @id;", Conexao.Conexao);
+                    Query.Parameters.AddWithValue("@Nome", txtname.Text);
+                    Query.Parameters.AddWithValue("@Descricao", txtdesc.Text);
+                    Query.Parameters.AddWithValue("@Validade", DateTime.Parse(datevalidade.Text));
+                    Query.Parameters.AddWithValue("@Preco", Util.ToDecimal(txtpreco.Text));
+                    Query.Parameters.AddWithValue("@Quantidade", txtquantidade.Text);
+                    Query.Parameters.AddWithValue("@Cardapio", (chbProduto.Checked ? 1 : 0));
+                    Query.Parameters.AddWithValue("@id", txtid.Text);
 
+                    Query.ExecuteNonQuery();
 
-                    objCon.Close();
+                    Conexao.Close();
+
                     this.LoadLista();
-                    txtid.Clear();
-                    txtname.Clear();
-                    txtdesc.Clear();
-                    datevalidade.Text = "01/01/2020";
-                    txtpreco.Clear();
-                    txtquantidade.Clear();
-                    chbProduto.Checked = false;
+                    this.LimparFormulario();
+
+                    MessageBox.Show("Produto editado com sucesso.");
+                }
+                else {
+                    throw new Exception("Selecione um produto antes de editar.");
                 }
             }
-            catch (Exception a)
-            {
-                MessageBox.Show(a.Message);
-                objCon.Close();
-
-
-                txtid.Clear();
-                txtname.Clear();
-                txtdesc.Clear();
-                datevalidade.Text = "01/01/2020";
-                txtpreco.Clear();
-                txtquantidade.Clear();
-                chbProduto.Checked = false;
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
-
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            txtpesquisa.Text = "";
-        }
-
-        private void btnrefresh_Click(object sender, EventArgs e)
-        {
-            objCon.Open();
-
-            MySqlCommand objCmd = new MySqlCommand("SELECT * FROM estoque", objCon);
-
-
-            MySqlDataAdapter Adapter = new MySqlDataAdapter(objCmd);
-            DataTable table = new DataTable();
-
-            Adapter.Fill(table);
-            dgvlista.DataSource = table;
-
-            objCon.Close();
-
-            dgvlista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-        }
-
         private void dgvlista_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-
-
                 DataGridViewRow row = this.dgvlista.Rows[e.RowIndex];
 
                 txtid.Text = row.Cells[0].Value.ToString();
                 txtname.Text = row.Cells[1].Value.ToString();
                 txtdesc.Text = row.Cells[2].Value.ToString();
                 datevalidade.Text = row.Cells[3].Value.ToString();
-                txtpreco.Text = row.Cells[4].Value.ToString();
+                txtpreco.Text = Util.ToReais(row.Cells[4].Value.ToString());
                 txtquantidade.Text = row.Cells[5].Value.ToString();
                 chbProduto.Checked = (row.Cells[6].Value.ToString()=="1"?true:false);
                 txtname.Enabled = true;
@@ -159,15 +121,6 @@ namespace MAC_Example
             catch (Exception a)
             {
                 MessageBox.Show(a.Message);
-                objCon.Close();
-
-
-                txtid.Clear();
-                txtname.Clear();
-                txtdesc.Clear();
-                datevalidade.Text = "01/01/2020";
-                txtpreco.Clear();
-                txtquantidade.Clear();
             }
         }
 
@@ -175,55 +128,33 @@ namespace MAC_Example
         {
             try
             {
-                if (!(txtid.Text == String.Empty))
+                if (!string.IsNullOrWhiteSpace(txtid.Text))
                 {
-                    objCon.Open();
+                    DialogResult Result = MessageBox.Show("Tem certeza que deseja excluir o produto " + txtname.Text + "?", "Excluir", MessageBoxButtons.YesNo);
+                    
+                    if (Result == DialogResult.Yes) {
+                        ConexaoMySql Conexao = new ConexaoMySql();
 
+                        Conexao.Open();
 
-                    DialogResult Check = MessageBox.Show("Deseja realmente excluir este item?", ".", MessageBoxButtons.YesNo);
-                    if (Check == DialogResult.Yes)
-                    {
-                        MySqlCommand objCmd = new MySqlCommand("DELETE FROM `bancodedados`.`estoque` WHERE (`id` = '" + txtid.Text + "');", objCon);
-                        objCmd.ExecuteNonQuery();
-                        MessageBox.Show("Deletado Com Sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MySqlCommand Query = new MySqlCommand("DELETE FROM estoque WHERE id = @id;", Conexao.Conexao);
+                        Query.Parameters.AddWithValue("@id", txtid);
+                        Query.ExecuteNonQuery();
 
+                        Conexao.Close();
+
+                        MessageBox.Show("Produto " + txtname.Text + " excluido com sucesso.");
+
+                        this.LoadLista();
+                        this.LimparFormulario();
                     }
-
-
-
-
-
-
-
-
-
-
-
-                    objCon.Close();
-                    this.LoadLista();
-                    txtid.Clear();
-                    txtname.Clear();
-                    txtdesc.Clear();
-                    datevalidade.Text = "01/01/2020";
-                    txtpreco.Clear();
-                    txtquantidade.Clear();
-
-
+                }
+                else {
+                    throw new Exception("Selecione um produto para excluir.");
                 }
             }
-            catch (Exception a)
-            {
-                MessageBox.Show(a.Message);
-                objCon.Close();
-
-
-                txtid.Clear();
-                txtname.Clear();
-                txtdesc.Clear();
-                datevalidade.Text = "01/01/2020";
-                txtpreco.Clear();
-                txtquantidade.Clear();
-
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -239,55 +170,43 @@ namespace MAC_Example
 
 
 
-
-
-
-        private void btnpesquisa_Click(object sender, EventArgs e)
-        {
-            objCon.Open();
-
-            MySqlCommand objCmd = new MySqlCommand("SELECT * FROM estoque WHERE CONCAT(`Nome`, `Descricao`, `Validade`, `Preco`, `Quantidade`) LIKE '" + txtpesquisa.Text + "%';", objCon);
-
-            objCmd.ExecuteNonQuery();
-            MySqlDataAdapter Adapter = new MySqlDataAdapter(objCmd);
-            DataTable table = new DataTable();
-
-            Adapter.Fill(table);
-            dgvlista.DataSource = table;
-
-            dgvlista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
-            dgvlista.ClearSelection();
-            objCon.Close();
-        }
-
-
         private void LoadLista()
         {
-            objCon.Open();
-
-            MySqlCommand objCmd = new MySqlCommand("SELECT * FROM estoque", objCon);
-
-
-            MySqlDataAdapter Adapter = new MySqlDataAdapter(objCmd);
-            DataTable table = new DataTable();
-
-            Adapter.Fill(table);
-            dgvlista.DataSource = table;
-            /*AutoCompleteStringCollection autotext = new AutoCompleteStringCollection();
-            foreach (DataRow Row in table.Rows)
+            try
             {
-                autotext.Add(Row["Nome"].ToString());
+                ConexaoMySql Conexao = new ConexaoMySql();
+
+                Conexao.Open();
+
+                MySqlCommand objCmd = new MySqlCommand("SELECT * FROM estoque", Conexao.Conexao);
+
+
+                MySqlDataAdapter Adapter = new MySqlDataAdapter(objCmd);
+                DataTable table = new DataTable();
+
+                Adapter.Fill(table);
+                dgvlista.DataSource = table;
+
+                /*AutoCompleteStringCollection autotext = new AutoCompleteStringCollection();
+                foreach (DataRow Row in table.Rows)
+                {
+                    autotext.Add(Row["Nome"].ToString());
+                }
+                txtpesquisa.AutoCompleteMode = AutoCompleteMode.Suggest;
+
+
+                txtpesquisa.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                txtpesquisa.AutoCompleteCustomSource = autotext;*/
+                
+                Conexao.Close();
+
+                dgvlista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             }
-            txtpesquisa.AutoCompleteMode = AutoCompleteMode.Suggest;
-
-
-            txtpesquisa.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-            txtpesquisa.AutoCompleteCustomSource = autotext;*/
-            objCon.Close();
-
-            dgvlista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         private void dgvlista_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -311,6 +230,12 @@ namespace MAC_Example
         private void UC_DashboardEstoque_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void OnPrecoChanged(object sender, EventArgs e)
+        {
+            Guna2TextBox guninha = (Guna2TextBox)sender;
+            Util.OnPressMoeda(ref guninha);
         }
     }
 }

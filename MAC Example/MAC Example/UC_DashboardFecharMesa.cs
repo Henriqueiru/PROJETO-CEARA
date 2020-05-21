@@ -49,7 +49,7 @@ namespace MAC_Example
                 {
                     valortotal += (Convert.ToDouble(data["Preco"].ToString()) * (int)data["Quantidade"]);
                 }
-                txtValorTotal.Text = Convert.ToString(valortotal);
+                txtValorTotal.Text = Util.ToReais(valortotal);
 
                 Listar.Close();
                 dgvlista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -95,7 +95,7 @@ namespace MAC_Example
                     MySqlCommand Query = new MySqlCommand("INSERT INTO fecharmesa(Nome, Pagamento, ValorTotal, Dividir, Pago, Data) VALUES (@Nome, @Pagamento, @ValorTotal, @Dividir, @Pago, Current_Time())", cadastrar.Conexao);
                     Query.Parameters.AddWithValue("@Nome", txtNome.Text);
                     Query.Parameters.AddWithValue("@Pagamento", cmbPagamento.Text);
-                    Query.Parameters.AddWithValue("@ValorTotal", txtValorTotal.Text);
+                    Query.Parameters.AddWithValue("@ValorTotal", Util.ToDecimal(txtValorTotal.Text));
                     Query.Parameters.AddWithValue("@Dividir", txtDividir.Text);
                     Query.Parameters.AddWithValue("@Pago", (chbPago.Checked?1:0));
                     Query.ExecuteNonQuery();
@@ -143,6 +143,32 @@ namespace MAC_Example
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private void OnKeyPressDividir(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != (char)8;
+        }
+
+        private void OnKeyDownDividir(object sender, KeyEventArgs e)
+        {
+            try
+            {
+
+                double valor = Convert.ToDouble(txtValorTotal.Text);
+                int divisao = Convert.ToInt32(txtDividir.Text);
+                txtDividido.Text = (valor / divisao).ToString("F");
+            }
+            catch
+            {
+                txtDividido.Text = "0";
+            }
+
+        }
+        private void OnPrecoChanged(object sender, EventArgs e)
+        {
+            Guna2TextBox guninha = (Guna2TextBox)sender;
+            Util.OnPressMoeda(ref guninha);
         }
     }
 }
