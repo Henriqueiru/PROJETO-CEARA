@@ -221,10 +221,7 @@ namespace MAC_Example
 
         private void txtpesquisa_TextChanged(object sender, EventArgs e)
         {
-            String filterField = "Nome";
-
-            (dgvlista.DataSource as DataTable).DefaultView.RowFilter =
-    string.Format("Nome LIKE '{0}%' OR Nome LIKE '% {0}%'", txtpesquisa.Text);
+            (dgvlista.DataSource as DataTable).DefaultView.RowFilter = string.Format("Nome LIKE '{0}%' OR Nome LIKE '% {0}%'", txtpesquisa.Text);
         }
 
         private void UC_DashboardEstoque_Load(object sender, EventArgs e)

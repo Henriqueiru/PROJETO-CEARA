@@ -16,10 +16,16 @@ namespace MAC_Example
         public Form2(int NivelAcesso)
         {
             InitializeComponent();
-            UC_Dashboard uC_ = new UC_Dashboard();           
-            addUserControl(uC_);
+            
             this.NivelAcesso = NivelAcesso;
-           
+            if(this.NivelAcesso == 0)
+            {
+                addUserControl(new UC_Dashboard());
+            }
+            else
+            {
+                addUserControl(new UC_DashboardMesas());
+            }
         }
         private void moveImageBox(object sender)
         {
@@ -41,8 +47,12 @@ namespace MAC_Example
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            if(this.NivelAcesso == 0)
+            {
+
             UC_Dashboard uC_ = new UC_Dashboard();
             addUserControl(uC_);
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

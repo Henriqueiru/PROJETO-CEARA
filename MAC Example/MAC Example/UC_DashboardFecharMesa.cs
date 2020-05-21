@@ -23,6 +23,7 @@ namespace MAC_Example
             this.formprincipal = form;
             this.CodigoMesa = CodigoMesa;
             this.LoadLista();
+            this.LoadCliente();
             lblMesa.Text = "Mesa " + CodigoMesa;
         }
 
@@ -93,7 +94,7 @@ namespace MAC_Example
                 if (valortotal > 0)
                 {
                     MySqlCommand Query = new MySqlCommand("INSERT INTO fecharmesa(Nome, Pagamento, ValorTotal, Dividir, Pago, Data) VALUES (@Nome, @Pagamento, @ValorTotal, @Dividir, @Pago, Current_Time())", cadastrar.Conexao);
-                    Query.Parameters.AddWithValue("@Nome", txtNome.Text);
+                    Query.Parameters.AddWithValue("@Nome", cmbClientes.SelectedValue);
                     Query.Parameters.AddWithValue("@Pagamento", cmbPagamento.Text);
                     Query.Parameters.AddWithValue("@ValorTotal", Util.ToDecimal(txtValorTotal.Text));
                     Query.Parameters.AddWithValue("@Dividir", txtDividir.Text);
@@ -169,6 +170,30 @@ namespace MAC_Example
         {
             Guna2TextBox guninha = (Guna2TextBox)sender;
             Util.OnPressMoeda(ref guninha);
+        }
+        private void LoadCliente()
+        {
+            try
+            {
+                ConexaoMySql Listar = new ConexaoMySql();
+                Listar.Open();
+
+                MySqlCommand Query = new MySqlCommand("SELECT * FROM clientes ;", Listar.Conexao);
+                MySqlDataAdapter Adapter = new MySqlDataAdapter(Query);
+                DataTable table = new DataTable();
+
+                Adapter.Fill(table);
+                cmbClientes.ValueMember = "id";
+                cmbClientes.DisplayMember = "Nome";
+                cmbClientes.DataSource = table;
+
+                Listar.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

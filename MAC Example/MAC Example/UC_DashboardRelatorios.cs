@@ -25,7 +25,7 @@ namespace MAC_Example
                 ConexaoMySql Listar = new ConexaoMySql();
                 Listar.Open();
 
-                MySqlCommand Query = new MySqlCommand("SELECT Nome, Pagamento, ValorTotal AS Valor, Dividir, IF(Pago, 'Sim', 'Não') AS Pago, Data FROM fecharmesa ORDER BY Data DESC;", Listar.Conexao);
+                MySqlCommand Query = new MySqlCommand("SELECT clientes.Nome, fecharmesa.Pagamento, fecharmesa.ValorTotal AS Valor, fecharmesa.Dividir, IF(fecharmesa.Pago, 'Sim', 'Não') AS Pago, Data FROM fecharmesa LEFT OUTER JOIN clientes ON (fecharmesa.Nome = clientes.id) ORDER BY Data DESC;", Listar.Conexao);
                
                 MySqlDataAdapter Adapter = new MySqlDataAdapter(Query);
                 DataTable table = new DataTable();
@@ -39,7 +39,15 @@ namespace MAC_Example
                 MessageBox.Show(e.Message);
             }
         }
-
+        private void OnTextPesquisa(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtpesquisa.Text))
+            {
+                (dgvlista.DataSource as DataTable).DefaultView.RowFilter = string.Format("Nome LIKE '{0}%' OR Nome LIKE '% {0}%'", txtpesquisa.Text);
+            }
+            else {
+                (dgvlista.DataSource as DataTable).DefaultView.RowFilter = null;
+            }
+        }
     }
-
 }

@@ -1,0 +1,13 @@
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC Example.csprojAssemblyReference.cache
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.Form1.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.Form2.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.Properties.Resources.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.UC_Dashboard.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.UC_DashboardClientes.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.UC_DashboardEstoque.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.UC_DashboardFecharMesa.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.UC_DashboardMesas.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.UC_DashboardRelatorios.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC_Example.UC_DashboardVendas.resources
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC Example.csproj.GenerateResource.cache
+C:\Users\User\Source\Repos\Henriqueiru\Design-Mac\MAC Example\MAC Example\obj\Release\MAC Example.csproj.CoreCompileInputs.cache
