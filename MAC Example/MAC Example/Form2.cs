@@ -24,7 +24,7 @@ namespace MAC_Example
             }
             else
             {
-                addUserControl(new UC_DashboardMesas());
+                addUserControl(new UC_DashboardMesas(this));
             }
         }
         private void moveImageBox(object sender)

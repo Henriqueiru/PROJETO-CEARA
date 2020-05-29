@@ -34,8 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_DashboardEstoque));
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dgvlista = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtid = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,7 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtdesc = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtids = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtid = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtquantidade = new Guna.UI2.WinForms.Guna2TextBox();
@@ -99,12 +97,12 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Emoji", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(130, 0);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(146, 0);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(221, 34);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(194, 34);
             this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "Controle de Estoque";
+            this.guna2HtmlLabel1.Text = "Cadastrar Estoque";
             // 
             // dgvlista
             // 
@@ -170,56 +168,6 @@
             this.dgvlista.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvlista.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dgvlista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvlista_CellClick);
-            // 
-            // txtid
-            // 
-            this.txtid.BackColor = System.Drawing.Color.Transparent;
-            this.txtid.BorderRadius = 20;
-            this.txtid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtid.DefaultText = "";
-            this.txtid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtid.DisabledState.Parent = this.txtid;
-            this.txtid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtid.FocusedState.Parent = this.txtid;
-            this.txtid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtid.HoverState.Parent = this.txtid;
-            this.txtid.Location = new System.Drawing.Point(1125, 212);
-            this.txtid.Margin = new System.Windows.Forms.Padding(5);
-            this.txtid.Name = "txtid";
-            this.txtid.PasswordChar = '\0';
-            this.txtid.PlaceholderText = "";
-            this.txtid.SelectedText = "";
-            this.txtid.ShadowDecoration.Parent = this.txtid;
-            this.txtid.Size = new System.Drawing.Size(137, 58);
-            this.txtid.TabIndex = 3;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderRadius = 20;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(978, 144);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(137, 58);
-            this.guna2TextBox1.TabIndex = 4;
             // 
             // guna2TextBox2
             // 
@@ -526,39 +474,39 @@
             this.txtdesc.TabIndex = 19;
             this.txtdesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtids
+            // txtid
             // 
-            this.txtids.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtids.BackColor = System.Drawing.Color.Transparent;
-            this.txtids.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
-            this.txtids.BorderRadius = 10;
-            this.txtids.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtids.DefaultText = "";
-            this.txtids.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtids.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtids.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtids.DisabledState.Parent = this.txtids;
-            this.txtids.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtids.Enabled = false;
-            this.txtids.FillColor = System.Drawing.SystemColors.Control;
-            this.txtids.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtids.FocusedState.Parent = this.txtids;
-            this.txtids.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtids.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
-            this.txtids.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
-            this.txtids.HoverState.Parent = this.txtids;
-            this.txtids.Location = new System.Drawing.Point(137, 155);
-            this.txtids.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtids.Name = "txtids";
-            this.txtids.PasswordChar = '\0';
-            this.txtids.PlaceholderText = "";
-            this.txtids.SelectedText = "";
-            this.txtids.ShadowDecoration.Parent = this.txtids;
-            this.txtids.Size = new System.Drawing.Size(134, 29);
-            this.txtids.TabIndex = 17;
-            this.txtids.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtid.BackColor = System.Drawing.Color.Transparent;
+            this.txtid.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
+            this.txtid.BorderRadius = 10;
+            this.txtid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtid.DefaultText = "";
+            this.txtid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtid.DisabledState.Parent = this.txtid;
+            this.txtid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtid.Enabled = false;
+            this.txtid.FillColor = System.Drawing.SystemColors.Control;
+            this.txtid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtid.FocusedState.Parent = this.txtid;
+            this.txtid.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
+            this.txtid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(86)))), ((int)(((byte)(1)))));
+            this.txtid.HoverState.Parent = this.txtid;
+            this.txtid.Location = new System.Drawing.Point(137, 155);
+            this.txtid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtid.Name = "txtid";
+            this.txtid.PasswordChar = '\0';
+            this.txtid.PlaceholderText = "";
+            this.txtid.SelectedText = "";
+            this.txtid.ShadowDecoration.Parent = this.txtid;
+            this.txtid.Size = new System.Drawing.Size(134, 29);
+            this.txtid.TabIndex = 17;
+            this.txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -1036,10 +984,8 @@
             this.Controls.Add(this.txtpreco);
             this.Controls.Add(this.guna2TextBox2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtid);
-            this.Controls.Add(this.txtids);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label3);
@@ -1074,8 +1020,6 @@
 
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvlista;
-        private Guna.UI2.WinForms.Guna2TextBox txtid;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
@@ -1091,7 +1035,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtdesc;
-        private Guna.UI2.WinForms.Guna2TextBox txtids;
+        private Guna.UI2.WinForms.Guna2TextBox txtid;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtname;
         private Guna.UI2.WinForms.Guna2TextBox txtquantidade;

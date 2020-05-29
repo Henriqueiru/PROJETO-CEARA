@@ -27,7 +27,6 @@ namespace MAC_Example
             txtid.Clear();
             txtname.Clear();
             txtdesc.Clear();
-            datevalidade.Text = "01/01/2020";
             txtpreco.Clear();
             txtquantidade.Clear();
             chbProduto.Checked = false;
@@ -37,12 +36,12 @@ namespace MAC_Example
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(txtname.Text)) {
+                if (string.IsNullOrWhiteSpace(txtid.Text)) {
                     ConexaoMySql Conexao = new ConexaoMySql();
 
                     Conexao.Open();
 
-                    MySqlCommand Query = new MySqlCommand("INSERT INT estoque (Nome, Descricao, Validade, Preco, Quantidade, Cardapio) VALUES (@Nome, @Descricao, @Validade, @Preco, @Quantidade, @Cardapio);", Conexao.Conexao);
+                    MySqlCommand Query = new MySqlCommand("INSERT INTO estoque (Nome, Descricao, Validade, Preco, Quantidade, Cardapio) VALUES (@Nome, @Descricao, @Validade, @Preco, @Quantidade, @Cardapio);", Conexao.Conexao);
                     Query.Parameters.AddWithValue("@Nome", txtname.Text);
                     Query.Parameters.AddWithValue("@Descricao", txtdesc.Text);
                     Query.Parameters.AddWithValue("@Validade", DateTime.Parse(datevalidade.Text));
@@ -56,6 +55,12 @@ namespace MAC_Example
 
                     this.LoadLista();
                     this.LimparFormulario();
+
+                    MessageBox.Show("Item Inserido com Sucesso");
+                }
+                else
+                {
+                    throw new Exception("Limpe o Formulário antes de prosseguir");
                 }
             }
             catch (Exception ex) {
@@ -110,7 +115,7 @@ namespace MAC_Example
                 datevalidade.Text = row.Cells[3].Value.ToString();
                 txtpreco.Text = Util.ToReais(row.Cells[4].Value.ToString());
                 txtquantidade.Text = row.Cells[5].Value.ToString();
-                chbProduto.Checked = (row.Cells[6].Value.ToString()=="1"?true:false);
+                chbProduto.Checked = (row.Cells[6].Value.ToString()=="Sim"?true:false);
                 txtname.Enabled = true;
                 txtdesc.Enabled = true;
                 datevalidade.Enabled = true;
@@ -130,7 +135,7 @@ namespace MAC_Example
             {
                 if (!string.IsNullOrWhiteSpace(txtid.Text))
                 {
-                    DialogResult Result = MessageBox.Show("Tem certeza que deseja excluir o produto " + txtname.Text + "?", "Excluir", MessageBoxButtons.YesNo);
+                    DialogResult Result = MessageBox.Show("Tem certeza que deseja excluir o estoque " + txtname.Text + "?", "Excluir", MessageBoxButtons.YesNo);
                     
                     if (Result == DialogResult.Yes) {
                         ConexaoMySql Conexao = new ConexaoMySql();
@@ -138,12 +143,12 @@ namespace MAC_Example
                         Conexao.Open();
 
                         MySqlCommand Query = new MySqlCommand("DELETE FROM estoque WHERE id = @id;", Conexao.Conexao);
-                        Query.Parameters.AddWithValue("@id", txtid);
+                        Query.Parameters.AddWithValue("@id", txtid.Text);
                         Query.ExecuteNonQuery();
 
                         Conexao.Close();
 
-                        MessageBox.Show("Produto " + txtname.Text + " excluido com sucesso.");
+                        MessageBox.Show("Estoque " + txtname.Text + " excluido com sucesso.");
 
                         this.LoadLista();
                         this.LimparFormulario();
@@ -178,30 +183,19 @@ namespace MAC_Example
 
                 Conexao.Open();
 
-                MySqlCommand objCmd = new MySqlCommand("SELECT * FROM estoque", Conexao.Conexao);
+                MySqlCommand objCmd = new MySqlCommand("SELECT id, Nome, Descricao, Validade, Preco, Quantidade, IF(Cardapio = '1', 'Sim', 'Não') AS Cardapio FROM estoque", Conexao.Conexao);
 
 
                 MySqlDataAdapter Adapter = new MySqlDataAdapter(objCmd);
                 DataTable table = new DataTable();
 
                 Adapter.Fill(table);
-                dgvlista.DataSource = table;
-
-                /*AutoCompleteStringCollection autotext = new AutoCompleteStringCollection();
-                foreach (DataRow Row in table.Rows)
-                {
-                    autotext.Add(Row["Nome"].ToString());
-                }
-                txtpesquisa.AutoCompleteMode = AutoCompleteMode.Suggest;
-
-
-                txtpesquisa.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-                txtpesquisa.AutoCompleteCustomSource = autotext;*/
+                dgvlista.DataSource = table;          
                 
                 Conexao.Close();
 
                 dgvlista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                dgvlista.Columns[0].Visible = false;
             }
             catch(Exception e)
             {
@@ -209,15 +203,6 @@ namespace MAC_Example
             }
         }
 
-        private void dgvlista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Produtos_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtpesquisa_TextChanged(object sender, EventArgs e)
         {

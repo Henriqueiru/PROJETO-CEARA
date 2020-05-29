@@ -30,11 +30,11 @@ namespace MAC_Example
             try
             {
                 int NivelAcesso;
-                if(txtname2.Text == "Cleiton" && txtsenha2.Text == "1")
+                if(txtname2.Text == "Cleiton" && txtsenha2.Text == "ceara531978")
                 {
                     NivelAcesso = 0;
                 }
-                else if(txtname2.Text == "Neto" && txtsenha2.Text == "1")
+                else if(txtname2.Text == "Neto" && txtsenha2.Text == "netao531")
                 {
                     NivelAcesso = 1;
                 }

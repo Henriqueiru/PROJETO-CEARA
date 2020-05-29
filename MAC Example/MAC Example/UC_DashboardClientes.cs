@@ -49,7 +49,7 @@ namespace MAC_Example
 
                     this.LimparFormulario();
 
-                    MessageBox.Show("Foi adicionado com sucesso");
+                    MessageBox.Show("Cliente adicionado com sucesso");
                 }
                 else
                 {
@@ -143,6 +143,7 @@ namespace MAC_Example
 
                 Listar.Close();
                 dgvlista.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                dgvlista.Columns[0].Visible = false;
             }
             catch(Exception e)
             {

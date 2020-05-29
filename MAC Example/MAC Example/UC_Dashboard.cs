@@ -67,17 +67,17 @@ namespace MAC_Example
                 double Quantidade = Convert.ToDouble(Data["TotalVendas"]);
                 double PorcentagemMes = (Quantidade * 100) / MetaVendasMensal;
 
-                PorcentagemMedia.Value = Convert.ToInt32(PorcentagemMes);
+                PorcentagemMensal.Value = Convert.ToInt32(PorcentagemMes);
 
                 if (PorcentagemMes > 50)
                 {
-                    PorcentagemMedia.ProgressColor = Color.Green;
-                    PorcentagemMedia.ProgressColor2 = Color.Green;
+                    PorcentagemMensal.ProgressColor = Color.Green;
+                    PorcentagemMensal.ProgressColor2 = Color.Green;
                 }
                 else
                 {
-                    PorcentagemMedia.ProgressColor = Color.Red;
-                    PorcentagemMedia.ProgressColor2 = Color.Red;
+                    PorcentagemMensal.ProgressColor = Color.Red;
+                    PorcentagemMensal.ProgressColor2 = Color.Red;
                 }
 
                 Conexao.Close();
@@ -101,7 +101,7 @@ namespace MAC_Example
                 lblValorVendasAnoAtual.Text = "R$ " + Util.ToReais(Data["ValorTotal"]);
 
                 double Quantidade = Convert.ToDouble(Data["TotalVendas"]);
-                double PorcentagemAno = (Quantidade * 100) / MetaVendasMensal;
+                double PorcentagemAno = (Quantidade * 100) / MetaVendasAnual;
 
                 PorcentagemAnual.Value = Convert.ToInt32(PorcentagemAno);
 
